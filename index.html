@@ -8,37 +8,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
 
-    <!-- Disable tap highlight on IE -->
-    <meta name="msapplication-tap-highlight" content="no">
+    <!-- MUI starter -->
+    <link href="//cdn.muicss.com/mui-0.9.9/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.muicss.com/mui-0.9.9/js/mui.min.js"></script>
+    <script src="//cdn.muicss.com/mui-0.9.9/webcomponents/mui-webcomponents.js"></script>
 
-    <!-- Web Application Manifest -->
-    <link rel="manifest" href="manifest.json">
-
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="">
-
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="">
-
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileColor" content="#2F3BA2">
-
-    <!-- Color the status bar on mobile devices -->
-    <meta name="theme-color" content="#2F3BA2">
-
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
+    <link rel="stylesheet" href="main.css">
+    <style>
+      body {
+        padding-top: 10rem;
+        height: 300vh;
+      }
+    </style>
 </head>
 
 <body>
-	<main>Running ...</main>
+    <div class="mui-container">
+      <div class="mui-panel">
+        <small>Original code and idea by <strong><a href="http://50linesofco.de/post/2017-02-06-javascript-in-parallel-web-workers-transferables-and-sharedarraybuffer">Martin Splitt</a></strong></small>
+        <h1>WW Prime threading</h1>
+        <form onsubmit="event.preventDefault()">
 
-    <script src="main.js"></script>
+          <select class='testNumber'>
+            <option value="1">No WW</option>
+            <option value="2" default>One WW</option>
+            <option value="3" default>Four WW</option>
+          </select>
+
+          <input class='size' type="number" label="Input starter number" value='5'>
+
+          <section>
+            <button class="mui-btn mui-btn--primary mui-btn--raised">Start</button>
+          </section>
+        </form>
+        <ul class="progress">
+        </ul>
+      </div>
+    </div>
+    <script src='main.js'></script>
 </body>
 
 </html>
